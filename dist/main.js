@@ -6,8 +6,6 @@ $(document).ready(function() {
 });
 
 function click() {
-  $(".aa").on("click", ()=> {
-    $("#teste").html(`<p>Deu certo</p>`)
-  });
+  $("#teste").html(`<p>Deu certo</p>`)
 
 };

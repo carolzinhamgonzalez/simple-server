@@ -16,12 +16,52 @@ function api (){
   $.ajax({
     type:'GET',
     url,
-    success: casosZikas,
+    success: casesZikas,
     error: erro
   })
 };
 
-function casosZikas(data){
-  const base = data;
-  console.log(base);
+// lets utilizadas em functions na manipulação da api
+let weeks;
+let objCountries;
+
+function casesZikas(data){
+  // const base = data;
+  weeks = data.cases;
+  // console.log(weeks);
+  objWeek();
+  countryLa();
 };
+
+function objWeek(){
+  const regex_year= new RegExp(/(2017)/g);
+  const keyObj = Object.keys(weeks);
+  const arrWeek = keyObj.filter((value) => {
+    if (value.match(regex_year)){
+      return true
+    } else {
+      return false
+    }
+  });
+  objCountries = arrWeek.forEach((data) => {
+    console.log(weeks[data]);
+    // return weeks[data];
+  });
+  console.log(objCountries);
+};
+
+function countryLa(){
+  const regex_la= new RegExp(/(bra)|(mex)|(chl)|(per)|(arg)|(bol)|(pry)|(ury)|(col)|(ecu)|(ven)|(cri)|(cub)|(slv)|(gtn)|(hti)|(hnd)|(nic)|(pan)|(dom)/g);
+  const keyObj = Object.keys(objCountries);
+  const arrCountries = keyObj.filter((value) => {
+    if (value.match(regex_la)){
+      return true
+    } else {
+      return false
+    }
+  });
+  const objLa = arrCountries.forEach((data) => {
+    console.log(objCountries[data]);
+  });
+
+}
