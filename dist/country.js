@@ -41,24 +41,47 @@ function objWeek(){
     objCountries.push(weeks[data]);
     // return weeks[data];
   });
-
+  console.log(objCountries);
 
 
 
   function padrao(country){
     let dataCountry = [];
-    console.log(objCountries['0']['bra']);
+
     for (i in objCountries){
       dataCountry.push(objCountries[i][country]);
+    // let interno =  objCountries.map([i][country]['autochthonous_cases_confirmed']).reduce((acum, item) => acum + item, 0);
     };
-    return dataCountry;
+    // return dataCountry;
+    console.log(dataCountry);
+    const resultYear = $(dataCountry).get(-1);
+    const autochthonous = resultYear.autochthonous_cases_confirmed;
+    const exterior = resultYear.imported_cases;
+    const birth = resultYear.confirmed_congenital;
+    const birthPro = resultYear.congenital_probable;
+    const deaths = resultYear.deaths;
+    const gbs = resultYear.gbs_confirmed;
+    console.log(autochthonous);
+    console.log(exterior);
+    console.log(birth);
+    console.log(birthPro);
+    console.log(deaths);
+    console.log(gbs);
 
+    // for (i in dataCountry){
+    //   var interno = dataCountry[i]['autochthonous_cases_confirmed'];
+    // };
+    return resultYear;
   };
 
   console.log(padrao('bra'));
+  console.log(padrao('mex'));
 };
 
 
+// var array = [1, 2, 3, 4];
+// var ultimo = $(array).get(-1);
+// document.write(ultimo);
 
 
 
