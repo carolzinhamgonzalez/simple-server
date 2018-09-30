@@ -15,16 +15,12 @@ function api (){
 
 // lets utilizadas em functions na manipulação da api
 let weeks;
-// let arrWeek;
 let objCountries = [];
 let objLa = [];
 
 function casesZikas(data){
-  // const base = data;
   weeks = data.cases;
-  // console.log(weeks);
   objWeek();
-  // countryLa();
 };
 
 function objWeek(){
@@ -39,22 +35,21 @@ function objWeek(){
   });
   arrWeek.forEach((data) => {
     objCountries.push(weeks[data]);
-    // return weeks[data];
   });
-  console.log(objCountries);
+  // console.log(objCountries);
 
-
-
-  function padrao(country){
+  function cases(country){
     let dataCountry = [];
-
     for (i in objCountries){
       dataCountry.push(objCountries[i][country]);
-    // let interno =  objCountries.map([i][country]['autochthonous_cases_confirmed']).reduce((acum, item) => acum + item, 0);
     };
-    // return dataCountry;
     console.log(dataCountry);
     const resultYear = $(dataCountry).get(-1);
+    // const n = 1;
+    // while (resultYear === undefined | "") {
+    //   $(dataCountry).get(-(n+))
+    // };
+
     const autochthonous = resultYear.autochthonous_cases_confirmed;
     const exterior = resultYear.imported_cases;
     const birth = resultYear.confirmed_congenital;
@@ -68,24 +63,10 @@ function objWeek(){
     console.log(deaths);
     console.log(gbs);
 
-    // for (i in dataCountry){
-    //   var interno = dataCountry[i]['autochthonous_cases_confirmed'];
-    // };
     return resultYear;
   };
 
-  console.log(padrao('bra'));
-  console.log(padrao('mex'));
+  // console.log(padrao('bra'));
+  // console.log(padrao('mex'));
+  console.log(padrao('chl'));
 };
-
-
-// var array = [1, 2, 3, 4];
-// var ultimo = $(array).get(-1);
-// document.write(ultimo);
-
-
-
-// let test = objCountries.map(item => item[i][country]);
-// return test;
-
-// let ativas = dados.map(item => item.quantidade).reduce( (prev, item) => prev + item, 0 );
