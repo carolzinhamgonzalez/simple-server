@@ -74,57 +74,74 @@ function objWeek(){
 };
 
 function clickBra() {
-  $("#teste").html(`
-    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
-    Região das Américas desde 2015.</p>
-    <p> No <strong>${brasil.country}</strong> somente em 2017 foram registrados:</p>
-    <div id="show-data">
-      <p> ${brasil.autochthonous_cases_confirmed} casos contraídos no país.</p>
-      <p> ${brasil.imported_cases} casos contraídos no exterior.</p>
-      <p> ${brasil.deaths} mortes.</p>
-      <p> ${brasil.confirmed_congenital} crianças que nasceram com o zika vírus e ${brasil.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
+  $("main").html(`
+    <div class="container d-flex justify-content-center">
+      <div class="row d-flex align-items-center">
+        <div class="col">
+          <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
+          Região das Américas desde 2015.</p>
+          <p> No <strong>${brasil.country}</strong> somente em 2017 foram registrados:</p>
+          <div id="show-data">
+          <p class="mb-0"> ${brasil.autochthonous_cases_confirmed} casos contraídos no país.</p>
+          <p class="mb-0"> ${brasil.imported_cases} casos contraídos no exterior.</p>
+          <p class="mb-0"> ${brasil.deaths} mortes.</p>
+          <p class="mb-0"> ${brasil.confirmed_congenital} crianças que nasceram com o zika vírus</p>
+          <p class="mb-0">${brasil.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
+          </div>
+          <h4 class="mt-4"><a href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
+        </div>
+        <div class="col">
+          <a href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev3.png"></a>
+        </div>
+      </div>
     </div>
     `);
 };
 
 function clickChl() {
-  $("#teste").html(`
-    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
-    Região das Américas desde 2015.</p>
-    <p> No <strong>${chile.country}</strong> somente em 2017 foram registrados:</p>
-    <div id="show-data">
-      <p> ${chile.autochthonous_cases_confirmed} casos contraídos no país.</p>
-      <p> ${chile.imported_cases} casos contraídos no exterior.</p>
-      <p> ${chile.deaths} mortes.</p>
-      <p> ${chile.confirmed_congenital} crianças que nasceram com o zika vírus. </p>
-    </div>
-    `);
-};
-
-function clickPer() {
-  $("#teste").html(`
-    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
-    Região das Américas desde 2015.</p>
-    <p> No <strong>${peru.country}</strong> somente em 2017 foram registrados:</p>
-    <div id="show-data">
-      <p> ${peru.autochthonous_cases_confirmed} casos contraídos no país.</p>
-      <p> ${peru.imported_cases} casos contraídos no exterior.</p>
-      <p> ${peru.deaths} mortes.</p>
-      <p> ${peru.confirmed_congenital} crianças que nasceram com o zika víruse ${peru.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
+  $("main").html(`
+    <div class="container d-flex justify-content-center">
+      <div class="row d-flex align-items-center">
+        <div class="col">
+          <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
+          Região das Américas desde 2015.</p>
+          <p> No <strong>${chile.country}</strong> somente em 2017 foram registrados:</p>
+          <div id="show-data">
+          <p class="mb-0"> ${chile.autochthonous_cases_confirmed} casos contraídos no país.</p>
+          <p class="mb-0"> ${chile.imported_cases} casos contraídos no exterior.</p>
+          <p class="mb-0"> ${chile.deaths} mortes.</p>
+          <p class="mb-0"> ${chile.confirmed_congenital} crianças que nasceram com o zika vírus</p>
+          </div>
+          <h4 class="mt-4"><a href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
+        </div>
+        <div class="col">
+          <a href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev4.png"></a>
+        </div>
+      </div>
     </div>
     `);
 };
 
 function clickBol() {
-  $("#teste").html(`
-    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
-    Região das Américas desde 2015.</p>
-    <p> No <strong>${bolivia.country}</strong> somente em 2017 foram registrados:</p>
-    <div id="show-data">
-      <p> ${bolivia.autochthonous_cases_confirmed} casos contraídos no país.</p>
-      <p> ${bolivia.imported_cases} casos contraídos no exterior.</p>
-      <p> ${bolivia.deaths} mortes.</p>
-      <p> ${bolivia.confirmed_congenital} crianças que nasceram com o zika vírus e ${bolivia.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
+  $("main").html(`
+    <div class="container d-flex justify-content-center">
+      <div class="row d-flex align-items-center">
+        <div class="col">
+          <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
+          Região das Américas desde 2015.</p>
+          <p> No <strong>${bolivia.country}</strong> somente em 2017 foram registrados:</p>
+          <div id="show-data">
+          <p class="mb-0"> ${bolivia.autochthonous_cases_confirmed} casos contraídos no país.</p>
+          <p class="mb-0"> ${bolivia.imported_cases} casos contraídos no exterior.</p>
+          <p class="mb-0"> ${bolivia.deaths} mortes.</p>
+          <p class="mb-0"> ${bolivia.confirmed_congenital} crianças que nasceram com o zika vírus</p>
+          </div>
+          <h4 class="mt-4"><a href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
+        </div>
+        <div class="col">
+          <a href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev2.png"></a>
+        </div>
+      </div>
     </div>
     `);
 };
