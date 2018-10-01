@@ -17,10 +17,14 @@ function api (){
 let weeks;
 let objCountries = [];
 let objLa = [];
+let autochthonous, exterior, birth, birthPro, deaths, gbs, nameCountry;
+let brasil, chile, peru, bolivia;
+
 
 function casesZikas(data){
   weeks = data.cases;
   objWeek();
+
 };
 
 function objWeek(){
@@ -50,23 +54,77 @@ function objWeek(){
     //   $(dataCountry).get(-(n+))
     // };
 
-    const autochthonous = resultYear.autochthonous_cases_confirmed;
-    const exterior = resultYear.imported_cases;
-    const birth = resultYear.confirmed_congenital;
-    const birthPro = resultYear.congenital_probable;
-    const deaths = resultYear.deaths;
-    const gbs = resultYear.gbs_confirmed;
-    console.log(autochthonous);
-    console.log(exterior);
-    console.log(birth);
-    console.log(birthPro);
-    console.log(deaths);
-    console.log(gbs);
+    // autochthonous = resultYear.autochthonous_cases_confirmed;
+    // exterior = resultYear.imported_cases;
+    // birth = resultYear.confirmed_congenital;
+    // birthPro = resultYear.congenital_probable;
+    // deaths = resultYear.deaths;
+    // gbs = resultYear.gbs_confirmed;
+    // nameCountry = resultYear.country;
 
     return resultYear;
   };
-
+  brasil = cases('bra');
+  chile = cases('chl');
+  peru = cases('per');
+  bolivia = cases('bol');
   // console.log(padrao('bra'));
-  // console.log(padrao('mex'));
-  console.log(padrao('chl'));
+   // console.log(padrao('mex'));
+  console.log(brasil);
+};
+
+function clickBra() {
+  $("#teste").html(`
+    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
+    Região das Américas desde 2015.</p>
+    <p> No <strong>${brasil.country}</strong> somente em 2017 foram registrados:</p>
+    <div id="show-data">
+      <p> ${brasil.autochthonous_cases_confirmed} casos contraídos no país.</p>
+      <p> ${brasil.imported_cases} casos contraídos no exterior.</p>
+      <p> ${brasil.deaths} mortes.</p>
+      <p> ${brasil.confirmed_congenital} crianças que nasceram com o zika vírus e ${brasil.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
+    </div>
+    `);
+};
+
+function clickChl() {
+  $("#teste").html(`
+    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
+    Região das Américas desde 2015.</p>
+    <p> No <strong>${chile.country}</strong> somente em 2017 foram registrados:</p>
+    <div id="show-data">
+      <p> ${chile.autochthonous_cases_confirmed} casos contraídos no país.</p>
+      <p> ${chile.imported_cases} casos contraídos no exterior.</p>
+      <p> ${chile.deaths} mortes.</p>
+      <p> ${chile.confirmed_congenital} crianças que nasceram com o zika vírus. </p>
+    </div>
+    `);
+};
+
+function clickPer() {
+  $("#teste").html(`
+    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
+    Região das Américas desde 2015.</p>
+    <p> No <strong>${peru.country}</strong> somente em 2017 foram registrados:</p>
+    <div id="show-data">
+      <p> ${peru.autochthonous_cases_confirmed} casos contraídos no país.</p>
+      <p> ${peru.imported_cases} casos contraídos no exterior.</p>
+      <p> ${peru.deaths} mortes.</p>
+      <p> ${peru.confirmed_congenital} crianças que nasceram com o zika víruse ${peru.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
+    </div>
+    `);
+};
+
+function clickBol() {
+  $("#teste").html(`
+    <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
+    Região das Américas desde 2015.</p>
+    <p> No <strong>${bolivia.country}</strong> somente em 2017 foram registrados:</p>
+    <div id="show-data">
+      <p> ${bolivia.autochthonous_cases_confirmed} casos contraídos no país.</p>
+      <p> ${bolivia.imported_cases} casos contraídos no exterior.</p>
+      <p> ${bolivia.deaths} mortes.</p>
+      <p> ${bolivia.confirmed_congenital} crianças que nasceram com o zika vírus e ${bolivia.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
+    </div>
+    `);
 };

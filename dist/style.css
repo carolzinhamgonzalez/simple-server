@@ -5,7 +5,7 @@
 }
 
 header{
-  background-color: #005d60;
+  background-color: #192232;
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -27,8 +27,8 @@ main{
 }
 
 footer{
-  background-color: #005d60;
-  height: 15vh;
+  background-color: #192232;
+  height: 5vh;
   display: flex;
   justify-content: center;
 }
