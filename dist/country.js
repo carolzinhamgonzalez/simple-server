@@ -17,14 +17,11 @@ function api (){
 let weeks;
 let objCountries = [];
 let objLa = [];
-let autochthonous, exterior, birth, birthPro, deaths, gbs, nameCountry;
-let brasil, chile, peru, bolivia;
-
+let brasil, chile, bolivia;
 
 function casesZikas(data){
   weeks = data.cases;
   objWeek();
-
 };
 
 function objWeek(){
@@ -40,7 +37,6 @@ function objWeek(){
   arrWeek.forEach((data) => {
     objCountries.push(weeks[data]);
   });
-  // console.log(objCountries);
 
   function cases(country){
     let dataCountry = [];
@@ -49,28 +45,12 @@ function objWeek(){
     };
     console.log(dataCountry);
     const resultYear = $(dataCountry).get(-1);
-    // const n = 1;
-    // while (resultYear === undefined | "") {
-    //   $(dataCountry).get(-(n+))
-    // };
-
-    // autochthonous = resultYear.autochthonous_cases_confirmed;
-    // exterior = resultYear.imported_cases;
-    // birth = resultYear.confirmed_congenital;
-    // birthPro = resultYear.congenital_probable;
-    // deaths = resultYear.deaths;
-    // gbs = resultYear.gbs_confirmed;
-    // nameCountry = resultYear.country;
 
     return resultYear;
   };
   brasil = cases('bra');
   chile = cases('chl');
-  peru = cases('per');
   bolivia = cases('bol');
-  // console.log(padrao('bra'));
-   // console.log(padrao('mex'));
-  console.log(brasil);
 };
 
 function clickBra() {
@@ -88,10 +68,10 @@ function clickBra() {
           <p class="mb-0"> ${brasil.confirmed_congenital} crianças que nasceram com o zika vírus</p>
           <p class="mb-0">${brasil.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
           </div>
-          <h4 class="mt-4"><a href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
+          <h4 class="mt-4"><a class="link-externo" href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
         </div>
         <div class="col">
-          <a href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev3.png"></a>
+          <a class="link-externo" href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev3.png"></a>
         </div>
       </div>
     </div>
@@ -112,10 +92,10 @@ function clickChl() {
           <p class="mb-0"> ${chile.deaths} mortes.</p>
           <p class="mb-0"> ${chile.confirmed_congenital} crianças que nasceram com o zika vírus</p>
           </div>
-          <h4 class="mt-4"><a href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
+          <h4 class="mt-4"><a class="link-externo" href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
         </div>
         <div class="col">
-          <a href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev4.png"></a>
+          <a class="link-externo" href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev4.png"></a>
         </div>
       </div>
     </div>
@@ -136,10 +116,10 @@ function clickBol() {
           <p class="mb-0"> ${bolivia.deaths} mortes.</p>
           <p class="mb-0"> ${bolivia.confirmed_congenital} crianças que nasceram com o zika vírus</p>
           </div>
-          <h4 class="mt-4"><a href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
+          <h4 class="mt-4"><a class="link-externo" href=http://www.who.int/emergencies/diseases/zika/en>Zika vírus no mundo </a></h4>
         </div>
         <div class="col">
-          <a href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev2.png"></a>
+          <a class="link-externo" href=https://www.unicef.org/brazil/pt/activities_32722.html><img class="img-prev" src="dist/img/prev2.png"></a>
         </div>
       </div>
     </div>

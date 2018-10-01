@@ -1,28 +1,15 @@
 $(document).ready(function() {
-  // const bandeira = click();
-  // flags()
   page('/', index);
   page('/bra', clickBra);
   page('/chl', clickChl);
-  // page('/per', clickPer);
   page('/bol', clickBol);
   page();
   api();
-
 });
 
 function index(){
   $("main").html(firstPage());
-  // flags();
 };
-
-// function flags() {
-//   $('<div id="flags"></div>').appendTo('main');
-//   $(`<a href="/bra"> <img class="img-country" src="dist/img/br.jpg"> </a>`).appendTo('#flags').html();
-//   $(`<a href="/chl"> <img class="img-country" src="dist/img/chl.png"> </a>`).appendTo('#flags').html();
-//   $(`<a href="/bol"> <img class="img-country" src="dist/img/chl.png"> </a>`).appendTo('#flags').html();
-// };
-
 
 function firstPage() {
     return `
@@ -46,12 +33,8 @@ function firstPage() {
             <a href="/chl"><img class="img-country" src="dist/img/chl.png"></a>
             <a href="/bol"><img class="img-country" src="dist/img/bol.jpg"></a>
           </div>
-          <h3 class="mt-5"><a href=https://www.unicef.org/brazil/pt/activities_32722.html>Saiba como se previnir</a></h3>
+          <h3 class="mt-5"><a class="link-externo" href=https://www.unicef.org/brazil/pt/activities_32722.html>Saiba como se previnir</a></h3>
         </div>
       </div>
     </div>`
 };
-
-//
-
-//
